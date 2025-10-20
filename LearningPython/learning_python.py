@@ -73,4 +73,58 @@ elif Unit.upper() == "K":
        print("Weight in lbs: " + str(converted))
 else:
          print("Invalid unit")
-         
+
+#While loops
+i=10
+while i>=5 :
+      print (i*'*')
+      i=i-1
+print("Done")
+
+i=1
+while i<=5 :
+      print (i*'*')
+      i=i+1
+print("Done")
+
+#Lists
+
+names = ["Tahmid","Mosh","Sami","Inqiyad"]
+print(names[-1])
+names[0]="John"
+print(names[0])
+print (names[1:3])
+
+#List methods
+numbers = [1,2,6,5,4]
+numbers.append(7)
+numbers.insert(0,0)
+numbers.remove(6)
+numbers.sort()
+numbers.clear()
+print(len(numbers))
+
+#for loops
+
+numbers = [1,2,3,4,5]
+
+for i in numbers:
+     print(i)
+
+
+numbers = range (5,10,2)
+for number in numbers:
+     print(number)    
+
+for i in range(1,6):
+ print(i)
+ i=i+1
+
+#tuples
+numbers = (1,1,2,3,4,5)
+numbers.count(1)
+
+
+
+
+
