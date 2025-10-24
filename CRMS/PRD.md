@@ -85,6 +85,22 @@ A unified platform that combines:
 4. **Data Centralization**: Eliminate data silos and provide single source of truth
 5. **Scalability**: Support business growth from 5 to 50+ employees without system changes
 
+### 1.7 Timeline & Delivery
+
+**⚡ AGGRESSIVE TIMELINE: 8 WEEKS (2 MONTHS) TOTAL DELIVERY**
+
+- **Phase 1 (Weeks 1-2):** Core MVP - Auth, Customers, Logs
+- **Phase 2 (Weeks 3-4):** Email Integration, Advanced Search
+- **Phase 3 (Weeks 5-6):** Complaints, SLA, Automation, Taiga
+- **Phase 4 (Weeks 7-8):** VoIP, RBAC, Testing, Launch
+
+**Requirements for Success:**
+- 2-3 experienced full-stack developers (React + Python + Firebase)
+- Full-time commitment, no distractions
+- Pre-configured Firebase project and API credentials
+- Ruthless scope control (no feature additions during 8 weeks)
+- Daily standups and progress tracking
+
 ---
 
 ## 2. Product Vision & Objectives
@@ -3072,80 +3088,485 @@ Core pages:
 
 ## 11. Development Roadmap
 
-### Phase 1: MVP (Weeks 1-12)
+**🚀 TOTAL TIMELINE: 8 WEEKS (2 MONTHS)**
 
-**Goals:** Core CRM functionality with customer and log management
-
-| Week | Deliverable |
-|------|-------------|
-| 1-2  | Project setup, Firebase config, authentication |
-| 3-4  | Multi-tenancy architecture, user management, RBAC |
-| 5-6  | Customer CRUD, customer list, customer detail |
-| 7-8  | Logging system, timeline view, attachments |
-| 9-10 | Email integration (Gmail + n8n), email sync |
-| 11   | Search functionality, filters |
-| 12   | Testing, bug fixes, MVP launch |
-
-**Success Criteria:**
-- Users can manage customers and logs
-- Email sync working
-- Search functional
-- 5-10 pilot users onboarded
+> **CRITICAL CONSTRAINT:** Aggressive 2-month delivery timeline requires focused scope, experienced team, and disciplined execution.
 
 ---
 
-### Phase 2: Automation & Support (Weeks 13-20)
+### Phase 1: Core MVP (Weeks 1-2) ⚡ CRITICAL
 
-**Goals:** Complaint management, automation, Taiga integration
+**Timeline**: 2 weeks  
+**Team Required**: 2-3 full-stack developers working full-time  
+**Goal**: Functional CRM with basic customer management
 
-| Week | Deliverable |
-|------|-------------|
-| 13-14 | Complaint management system, Kanban board |
-| 15-16 | SLA tracking, notifications, customer updates |
-| 17-18 | Automated email sorting (n8n workflows) |
-| 19    | Taiga integration (create issues, sync status) |
-| 20    | Analytics dashboard, reporting |
+#### Week 1: Foundation (Days 1-7)
 
-**Success Criteria:**
-- Complaints tracked end-to-end
-- 80% email auto-categorization accuracy
-- Taiga issues sync reliably
+**Days 1-2: Setup & Authentication**
+- [ ] Firebase project setup (Firestore, Auth, Hosting, Storage)
+- [ ] Python backend skeleton (FastAPI with CORS)
+- [ ] React frontend boilerplate (Vite + TailwindCSS + React Router)
+- [ ] Basic authentication (email/password login/register)
+- [ ] User model and session management
+- [ ] Protected routes and auth middleware
+
+**Days 3-5: Multi-Tenancy & Users**
+- [ ] Multi-tenant architecture (tenantId in all collections)
+- [ ] Firestore security rules (tenant isolation)
+- [ ] User management (invite users via email)
+- [ ] Basic roles (admin/user only for MVP)
+- [ ] Basic admin dashboard
+- [ ] User list and status management
+
+**Days 6-7: Customer Management**
+- [ ] Customer data model (name, email, phone, company, address, tags)
+- [ ] Backend API: Customer CRUD endpoints
+- [ ] Frontend: Customer list view (table with pagination)
+- [ ] Frontend: Add/Edit customer modal/form
+- [ ] Frontend: Customer detail page (basic info display)
+- [ ] Basic validation (email format, required fields)
+
+#### Week 2: Logging & Core Features (Days 8-14)
+
+**Days 8-10: Logging System**
+- [ ] Log data model (type, subject, description, attachments, tags)
+- [ ] Backend API: Log CRUD endpoints
+- [ ] Frontend: Create log modal (select customer, type, add description)
+- [ ] Frontend: Log list view in customer detail page
+- [ ] File upload for attachments (Firebase Storage, max 10MB)
+- [ ] Support log types: Call, Email, Meeting, Note, Sample
+
+**Days 11-12: Search & Timeline**
+- [ ] Basic search API (customer name, email, company)
+- [ ] Frontend: Global search bar with results dropdown
+- [ ] Customer timeline view (chronological logs, newest first)
+- [ ] Filter logs by type (checkboxes)
+- [ ] Basic tags functionality (add/remove tags)
+- [ ] Expandable log details in timeline
+
+**Days 13-14: Polish & Deploy**
+- [ ] Dark theme implementation (TailwindCSS dark classes)
+- [ ] Purple accent colors (#6C63FF)
+- [ ] Responsive design (mobile-friendly, breakpoints)
+- [ ] Error handling and loading states (spinners, toasts)
+- [ ] Form validation feedback
+- [ ] Deploy to Firebase Hosting
+- [ ] Basic smoke testing and critical bug fixes
+- [ ] Demo preparation
+
+#### Phase 1 Deliverables
+
+✅ **Working Features:**
+- User authentication (register, login, logout, session management)
+- Multi-tenant architecture (complete data isolation)
+- Customer management (create, read, update, delete, list with pagination)
+- Activity logging (manual entry: calls, emails, notes, meetings, samples)
+- Basic search (customers by name, email, company)
+- Customer timeline (chronological view of all logs)
+- File attachments (upload, download, preview images)
+- Tags (add tags to customers and logs)
+- Responsive web UI (desktop + tablet + mobile)
+- Dark theme with purple accents
+
+❌ **Not Included (Phase 2+):**
+- Automatic email sync from Gmail
+- Complaint management system
+- Advanced search (fuzzy matching, filters, saved searches)
+- Full role-based permissions (only basic admin/user distinction)
+- Taiga integration
+- VoIP calling
+- AI chatbot
+- Voice commands
+- Mobile native app
+- Email templates
+- Interaction threads
+
+#### Success Criteria
+- [x] Demo-ready for stakeholders
+- [x] 3-5 pilot users can use the system
+- [x] Can create 10+ customers and 20+ logs without issues
+- [x] Page load < 3 seconds
+- [x] No critical bugs (blocking bugs fixed)
+- [x] Deployed and accessible via public URL
+- [x] Basic documentation (how to add customer, create log)
+
+#### Risk Mitigation for 2-Week Sprint
+- **Daily standups** to track progress and blockers
+- **Ruthless scope control** - no feature creep
+- **Pre-configured Firebase** project before Day 1
+- **Code reviews kept minimal** - focus on shipping
+- **Manual testing** only (no automated tests for MVP)
+- **Technical debt tracked** for Phase 2 cleanup
 
 ---
 
-### Phase 3: Communication & Intelligence (Weeks 21-28)
+### Phase 2: Communication & Search (Weeks 3-4)
 
-**Goals:** Call integration, chatbot, voice commands
+**Timeline**: 2 weeks  
+**Goal**: Email integration and advanced search
 
-| Week | Deliverable |
-|------|-------------|
-| 21-23 | VoIP integration (Twilio), click-to-call, call logging |
-| 24-25 | Internal conversational interface (chatbot) |
-| 26-27 | External customer-facing chatbot, Telegram bot |
-| 28    | Voice commands (speech-to-text) |
+#### Week 3: Email Integration (Days 15-21)
 
-**Success Criteria:**
-- Calls made from app/web
-- Chatbot handles 70% of internal queries
-- Voice commands 85% accurate
+**Days 15-17: Gmail API Setup**
+- [ ] Gmail API credentials and OAuth 2.0 configuration
+- [ ] n8n installation and workspace setup
+- [ ] Email sync workflow (Gmail webhook → n8n → CRM API)
+- [ ] Email data model (gmailMessageId, from, to, subject, body, attachments)
+- [ ] Backend API: Email CRUD endpoints
+- [ ] Handle email threading (Gmail threadId)
+
+**Days 18-21: Email Features**
+- [ ] Email list view (inbox-style with threading)
+- [ ] Email detail view (render HTML safely with DOMPurify)
+- [ ] Auto-link emails to customers (match by email address)
+- [ ] Manual link/unlink emails to customers (dropdown selector)
+- [ ] Send email from CRM (compose modal)
+- [ ] Email templates (3-5 basic templates: intro, follow-up, thank you)
+- [ ] BCC to CRM feature (unique email per user)
+
+#### Week 4: Advanced Search & Timeline (Days 22-28)
+
+**Days 22-24: Search Enhancement**
+- [ ] Advanced search modal (multiple filter fields)
+- [ ] Search across customers, logs, and emails
+- [ ] Fuzzy matching implementation (simple Levenshtein distance)
+- [ ] Date range filters (start date, end date)
+- [ ] Tag filters (multi-select)
+- [ ] Search suggestions/autocomplete (recent searches)
+- [ ] Saved searches (store in user preferences)
+
+**Days 25-28: Timeline & Threads**
+- [ ] Thread data model (group related logs/emails)
+- [ ] Create/manage threads (name, description)
+- [ ] Assign logs to threads
+- [ ] Enhanced timeline with thread filtering
+- [ ] Email integration in unified timeline
+- [ ] Quick actions on timeline items (reply, log call, etc.)
+- [ ] Export timeline to PDF (basic formatting)
+- [ ] Thread switching UI (tabs or dropdown)
+
+#### Phase 2 Deliverables
+
+✅ **Added Features:**
+- Gmail email sync (automatic, every 5 minutes)
+- Auto-link emails to customers (85%+ accuracy)
+- Send emails from CRM (via Gmail API)
+- Email templates (customizable)
+- BCC to CRM (for external email clients)
+- Advanced search (filters, fuzzy matching, date range)
+- Saved searches
+- Interaction threads (organize related activities)
+- Enhanced unified timeline (emails + logs + threads)
+- Export timeline to PDF
+
+#### Success Criteria
+- [x] Emails sync within 5 minutes of arrival
+- [x] 85%+ emails auto-linked correctly
+- [x] Search returns results in < 1 second
+- [x] Users can send emails without leaving CRM
+- [x] HTML emails render safely
+- [x] Threads help organize complex customer interactions
 
 ---
 
-### Phase 4: Mobile & Optimization (Weeks 29-36)
+### Phase 3: Support & Automation (Weeks 5-6)
 
-**Goals:** Android app, performance optimization, advanced features
+**Timeline**: 2 weeks  
+**Goal**: Complaint management and intelligent automation
 
-| Week | Deliverable |
-|------|-------------|
-| 29-32 | Kotlin Android app (feature parity with web) |
-| 33-34 | Performance optimization, caching, indexing |
-| 35    | Advanced analytics, custom reports |
-| 36    | Polish, bug fixes, launch preparation |
+#### Week 5: Complaint Management (Days 29-35)
 
-**Success Criteria:**
-- Android app published to Play Store
-- All performance metrics met
-- 50+ active users across tenants
+**Days 29-31: Complaint System Foundation**
+- [ ] Complaint data model (ticket#, status, severity, category, SLA)
+- [ ] Backend API: Complaint CRUD endpoints
+- [ ] Auto-generate ticket numbers (CRM-0001, CRM-0002, etc.)
+- [ ] SLA calculation logic (by severity: Critical=4h, High=24h, Medium=72h, Low=1wk)
+- [ ] Kanban board UI (columns for each status)
+- [ ] Drag-and-drop between status columns (react-beautiful-dnd)
+
+**Days 32-35: Complaint Features**
+- [ ] Complaint detail page/modal (full information)
+- [ ] Internal comments (team-only, with @mentions)
+- [ ] Customer updates (send email to customer)
+- [ ] Status workflow enforcement (New → Acknowledged → In Progress → Resolved → Closed)
+- [ ] Attachment support (screenshots, documents)
+- [ ] Overdue complaint alerts (red border, notification)
+- [ ] Assignment rules (manual and auto-assign round-robin)
+- [ ] Basic analytics widget (total, open, overdue counts)
+
+#### Week 6: Automation & Integrations (Days 36-42)
+
+**Days 36-38: Email Automation**
+- [ ] n8n workflow: Auto-categorize incoming emails (sales/support/complaint/general)
+- [ ] n8n workflow: Auto-assign emails to users (by category or round-robin)
+- [ ] Priority detection (keywords: urgent, ASAP, critical)
+- [ ] Automated email notifications (new assignment, mention, overdue)
+- [ ] Email-to-complaint conversion (one-click)
+- [ ] Complaint-to-email auto-responses (acknowledgment template)
+
+**Days 39-42: Taiga Integration & Notifications**
+- [ ] Taiga API authentication (API key storage)
+- [ ] Taiga connection test in settings
+- [ ] Create Taiga user story from complaint (one-click escalation)
+- [ ] Sync Taiga status to CRM (polling every 15 minutes)
+- [ ] Display Taiga issue link in complaint detail
+- [ ] Telegram bot setup (BotFather)
+- [ ] Telegram notifications (new complaint, overdue alert, mentions)
+- [ ] Telegram commands (/status, /search, /help)
+
+#### Phase 3 Deliverables
+
+✅ **Added Features:**
+- Complete complaint management system
+- Kanban board for complaints (drag-and-drop)
+- SLA tracking with visual countdown timers
+- Overdue complaint alerts
+- Internal comments with @mentions
+- Customer update emails
+- Automated email categorization (75%+ accuracy)
+- Automated email assignment
+- Priority detection
+- Email-to-complaint conversion
+- Taiga integration (escalation, status sync)
+- Telegram bot (notifications and basic commands)
+
+#### Success Criteria
+- [x] Complaints tracked from creation to resolution
+- [x] SLA breaches highlighted clearly
+- [x] 75%+ email auto-categorization accuracy
+- [x] Taiga issues created and synced successfully
+- [x] Telegram notifications delivered within 1 minute
+- [x] Users can manage 20+ concurrent complaints
+
+---
+
+### Phase 4: Advanced Features & Launch (Weeks 7-8)
+
+**Timeline**: 2 weeks  
+**Goal**: VoIP, polish, comprehensive testing, and production launch
+
+#### Week 7: VoIP & Advanced Features (Days 43-49)
+
+**Days 43-45: Call Integration**
+- [ ] Twilio account setup and phone number purchase
+- [ ] Twilio Voice SDK integration (web)
+- [ ] Click-to-call implementation (WebRTC)
+- [ ] Call interface (dialpad, mute, hold, hangup)
+- [ ] Call logging (auto-create log on hangup)
+- [ ] In-call notes (scratchpad that transfers to log)
+- [ ] Call history view (per customer)
+- [ ] Call recording (enable/disable, legal notice)
+- [ ] Recording playback interface
+
+**Days 46-49: Polish & Advanced Features**
+- [ ] Full role-based access control (6 roles: Super Admin, Tenant Admin, Manager, Sales Rep, Support Agent, Viewer)
+- [ ] Permissions matrix implementation (CRUD permissions per role)
+- [ ] User permissions management UI (assign roles, custom permissions)
+- [ ] Analytics dashboard (KPI widgets: customers, logs, complaints, emails)
+- [ ] Charts (complaint trends, resolution time, email volume)
+- [ ] Export reports (PDF, CSV for customers and complaints)
+- [ ] Bulk operations (import customers via CSV, bulk delete)
+- [ ] Activity audit log (track all create/update/delete actions)
+
+#### Week 8: Testing & Launch (Days 50-56)
+
+**Days 50-52: Comprehensive Testing**
+- [ ] Feature testing checklist (all features, all roles)
+- [ ] Cross-browser testing (Chrome, Firefox, Safari, Edge)
+- [ ] Mobile responsive testing (iOS Safari, Android Chrome)
+- [ ] Security testing (tenant isolation, XSS, CSRF, injection)
+- [ ] Performance testing (page load, API response times)
+- [ ] Load testing (simulate 50 concurrent users with Artillery or k6)
+- [ ] Bug triage and fixes (critical and high-priority only)
+
+**Days 53-56: Launch Preparation & Go-Live**
+- [ ] Production environment setup (separate from dev/staging)
+- [ ] Environment variables and secrets management
+- [ ] Backup configuration (daily automated backups to separate region)
+- [ ] Disaster recovery plan documented
+- [ ] Monitoring setup (Sentry for errors, UptimeRobot for availability)
+- [ ] Performance monitoring (Firebase Performance, custom metrics)
+- [ ] User documentation (help center articles, screenshots)
+- [ ] Video tutorials (3-5 short videos: getting started, key features)
+- [ ] Onboarding tutorial (in-app guided tour)
+- [ ] Final deployment to production
+- [ ] Smoke testing in production
+- [ ] **🚀 LAUNCH!**
+- [ ] User onboarding (invite first 20 users)
+- [ ] Feedback collection setup (in-app feedback widget)
+
+#### Phase 4 Deliverables
+
+✅ **Added Features:**
+- VoIP call integration (click-to-call from web)
+- Call logging and recording
+- In-call notes
+- Full RBAC system (6 roles with granular permissions)
+- User permissions management
+- Analytics dashboard (metrics and charts)
+- Export reports (PDF, CSV)
+- Bulk operations (import, delete)
+- Activity audit log
+- Production monitoring and alerts
+- User documentation and tutorials
+- Onboarding experience
+
+✅ **Production Ready:**
+- Deployed to production environment
+- Monitoring and alerting active
+- Backup and disaster recovery configured
+- Security hardened
+- Performance optimized
+- User documentation complete
+- Support system in place
+- Ready for real users at scale
+
+#### Success Criteria
+- [x] All P0 and P1 features working
+- [x] Zero critical bugs, < 5 high-priority bugs
+- [x] Page load < 2 seconds (95th percentile)
+- [x] API response < 500ms (95th percentile)
+- [x] 99% uptime target configured
+- [x] 20+ users onboarded and actively using
+- [x] Positive user feedback (NPS 40+)
+- [x] All performance metrics met
+- [x] Security audit passed
+
+---
+
+## 📊 8-Week Timeline Summary
+
+| Week | Phase | Focus | Key Deliverables | Team Size |
+|------|-------|-------|------------------|-----------|
+| **1-2** | Phase 1 | Core MVP | Auth, Multi-tenancy, Customers, Logs, Basic UI | 2-3 devs |
+| **3-4** | Phase 2 | Communication | Email sync, Send emails, Advanced search, Threads | 2-3 devs |
+| **5-6** | Phase 3 | Support & Automation | Complaints, SLA, Taiga, Email automation, Telegram | 2-4 devs |
+| **7-8** | Phase 4 | Advanced & Launch | VoIP, RBAC, Analytics, Testing, Production launch | 3-4 devs |
+
+**Total Effort:** ~200-240 developer-days (2-3 devs × 8 weeks × 5 days)
+
+---
+
+## 🎯 Feature Priority Matrix (8-Week Delivery)
+
+### P0 - Must-Have (Weeks 1-2)
+- ✅ Authentication & Multi-tenancy
+- ✅ Customer CRUD
+- ✅ Logging system (manual)
+- ✅ Basic search
+- ✅ Customer timeline
+- ✅ File attachments
+
+### P1 - Should-Have (Weeks 3-4)
+- ✅ Email integration (Gmail sync)
+- ✅ Send emails from CRM
+- ✅ Email templates
+- ✅ Advanced search (filters, fuzzy)
+- ✅ Interaction threads
+
+### P1 - Should-Have (Weeks 5-6)
+- ✅ Complaint management
+- ✅ SLA tracking
+- ✅ Email automation
+- ✅ Taiga integration
+- ✅ Telegram notifications
+
+### P1 - Should-Have (Weeks 7-8)
+- ✅ VoIP calling (basic)
+- ✅ Full RBAC
+- ✅ Analytics dashboard
+- ✅ Audit logs
+
+### P2 - Nice-to-Have (Post-Launch / Future)
+- ❌ AI Chatbot (conversational interface)
+- ❌ Voice commands (speech-to-text)
+- ❌ Android mobile app (Kotlin)
+- ❌ iOS app
+- ❌ WhatsApp integration
+- ❌ Slack integration
+- ❌ Multi-language support
+- ❌ Advanced ML/AI features (sentiment analysis, churn prediction)
+- ❌ Custom workflow builder
+- ❌ Payment gateway integration
+- ❌ Document management / e-signatures
+
+---
+
+## ⚠️ Critical Success Factors for 8-Week Delivery
+
+### Team Requirements
+✅ **2-3 experienced full-stack developers** (React + Python + Firebase)  
+✅ **Full-time commitment** (no other projects)  
+✅ **Minimal meetings** (daily 15-min standup only)  
+✅ **Pre-existing expertise** (no learning curve time)
+
+### Process Requirements
+✅ **Ruthless scope control** - NO feature additions during 8 weeks  
+✅ **Daily progress tracking** - Burndown chart, blockers resolved immediately  
+✅ **Technical debt accepted** - Clean up in maintenance phase  
+✅ **Manual testing only** - Automated tests post-launch  
+✅ **Code reviews lightweight** - Async, < 30 min turnaround  
+
+### Technical Requirements
+✅ **Firebase project pre-configured** before Day 1  
+✅ **Gmail API credentials ready** before Week 3  
+✅ **Twilio account setup** before Week 7  
+✅ **n8n instance running** before Week 3  
+✅ **Development environments ready** (local + staging)
+
+### Risk Mitigation
+✅ **Buffer time built in** - 1-2 days per phase for slippage  
+✅ **Parallel work streams** - Frontend/backend developed simultaneously  
+✅ **Feature flags** - Deploy incomplete features hidden  
+✅ **Rollback plan** - Can revert to previous stable version  
+✅ **Daily backups** - Starting Week 1  
+
+---
+
+## 📅 Daily Standup Format (15 minutes)
+
+**Each developer answers:**
+1. What did I complete yesterday?
+2. What will I complete today?
+3. Any blockers?
+
+**Track:**
+- Features completed (checkboxes in roadmap)
+- Current sprint velocity
+- Risk items (behind schedule, new blockers)
+
+**Action:**
+- Resolve blockers immediately
+- Re-prioritize if needed
+- Celebrate wins!
+
+---
+
+## 🚨 Red Flags to Watch
+
+| Red Flag | Action |
+|----------|--------|
+| **> 2 days behind schedule** | Cut scope, move features to next phase |
+| **Critical bugs piling up** | Stop new features, fix bugs first |
+| **Team member unavailable** | Immediate backup plan, reassign work |
+| **Integration not working** | Escalate immediately, find alternative |
+| **Performance issues early** | Address immediately, don't defer |
+
+---
+
+## 🎉 Launch Checklist (Day 56)
+
+- [ ] All P0 and P1 features working
+- [ ] Production environment deployed
+- [ ] Monitoring and alerts configured
+- [ ] Backups running daily
+- [ ] Security review completed
+- [ ] Performance benchmarks met
+- [ ] User documentation published
+- [ ] Support email/system ready
+- [ ] 20+ users invited and onboarded
+- [ ] Feedback mechanism in place
+- [ ] Celebration planned! 🍾
 
 ---
 

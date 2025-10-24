@@ -152,18 +152,28 @@ A complete Product Requirements Document that serves as the **single source of t
 
 ## 🎯 Core Features at a Glance
 
-### Phase 1: MVP (P0 - Critical)
+### Phase 1: Core MVP - 2 WEEKS (P0 - Critical)
+
+**Timeline:** Days 1-14  
+**Goal:** Functional CRM with basic customer & log management
 
 | # | Feature | Description | Status |
 |---|---------|-------------|--------|
-| 1 | **Authentication & Authorization** | Firebase Auth, RBAC, multi-tenancy | 🔴 Not Started |
+| 1 | **Authentication & Authorization** | Firebase Auth (email/password), basic admin/user roles | 🔴 Not Started |
 | 2 | **Multi-Tenancy Architecture** | Complete data isolation between companies | 🔴 Not Started |
-| 3 | **Customer Management (CRUD)** | Create, read, update, delete customers | 🔴 Not Started |
-| 4 | **Comprehensive Logging System** | Track all customer interactions | 🔴 Not Started |
-| 5 | **Customer History & Timeline** | Chronological view with threads | 🔴 Not Started |
-| 6 | **Advanced Search** | Fast, fuzzy search across all data | 🔴 Not Started |
-| 7 | **Email Integration (Gmail)** | Two-way sync, auto-linking, send from CRM | 🔴 Not Started |
-| 8 | **Complaint Management** | Track complaints with SLA and resolution | 🔴 Not Started |
+| 3 | **Customer Management (CRUD)** | Create, read, update, delete customers (basic fields) | 🔴 Not Started |
+| 4 | **Logging System** | Manual entry: calls, emails, notes, meetings (with attachments) | 🔴 Not Started |
+| 5 | **Customer Timeline** | Chronological view of logs (simple, no threads yet) | 🔴 Not Started |
+| 6 | **Basic Search** | Search customers by name, email, company | 🔴 Not Started |
+| 7 | **Tags** | Add/remove tags on customers and logs | 🔴 Not Started |
+| 8 | **Dark Theme UI** | Responsive web UI with purple accents | 🔴 Not Started |
+
+**NOT in Phase 1 (moved to Phase 2+):**
+- ❌ Email sync from Gmail
+- ❌ Complaint management
+- ❌ Advanced search (fuzzy, filters)
+- ❌ Full RBAC (only admin/user)
+- ❌ Threads
 
 ### Phase 2: Automation (P1 - High)
 
@@ -219,14 +229,23 @@ A complete Product Requirements Document that serves as the **single source of t
 
 ## 📅 Timeline Summary
 
+**⚡ AGGRESSIVE TIMELINE: 8 WEEKS (2 MONTHS) TOTAL**
+
 | Phase | Duration | Key Deliverables | Status |
 |-------|----------|-----------------|--------|
-| **Phase 1: MVP** | Weeks 1-12 | Auth, Multi-tenancy, Customers, Logs, Email, Search | 🔴 Not Started |
-| **Phase 2: Automation** | Weeks 13-20 | Complaints, SLA, Email sorting, Taiga, Analytics | 🔴 Not Started |
-| **Phase 3: Communication** | Weeks 21-28 | VoIP, Chatbot, Voice commands | 🔴 Not Started |
-| **Phase 4: Mobile** | Weeks 29-36 | Android app, Optimization, Launch | 🔴 Not Started |
+| **Phase 1: Core MVP** | Weeks 1-2 | Auth, Multi-tenancy, Customers, Logs, Basic Search | 🔴 Not Started |
+| **Phase 2: Communication** | Weeks 3-4 | Email sync, Send emails, Advanced Search, Threads | 🔴 Not Started |
+| **Phase 3: Support & Automation** | Weeks 5-6 | Complaints, SLA, Taiga, Email automation, Telegram | 🔴 Not Started |
+| **Phase 4: Advanced & Launch** | Weeks 7-8 | VoIP, RBAC, Analytics, Testing, Production Launch | 🔴 Not Started |
 
-**Total Timeline:** 36 weeks (9 months)
+**Total Timeline:** 8 weeks (2 months)
+
+**Critical Requirements:**
+- 2-3 experienced full-stack devs (React + Python + Firebase)
+- Full-time commitment (40+ hours/week)
+- Pre-configured Firebase & API credentials
+- Ruthless scope control (no feature creep)
+- Daily standups and progress tracking
 
 ---
 

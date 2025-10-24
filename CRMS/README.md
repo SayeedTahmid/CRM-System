@@ -1,23 +1,45 @@
 # Modern CRM System - Product Requirements Document
 
+> **⚡ CRITICAL UPDATE:** This PRD is designed for an **8-WEEK (2-MONTH) AGGRESSIVE DELIVERY TIMELINE**  
+> **Phase 1 MVP must be completed in 2 WEEKS**  
+> Requires experienced team, ruthless scope control, and full-time commitment
+
+---
+
 ## 📦 What's Included
 
-This directory contains the complete Product Requirements Document (PRD) for the Modern CRM System.
+This directory contains the complete Product Requirements Document (PRD) for the Modern CRM System optimized for rapid 8-week delivery.
 
 ### 📄 Files
 
-1. **PRD.md** (3,324 lines, 126KB)
+1. **PRD.md** (~3,500 lines, 135KB)
    - Complete, comprehensive Product Requirements Document
    - Single source of truth for the entire project
+   - **UPDATED:** 8-week aggressive timeline (was 36 weeks)
    - Covers all aspects from vision to technical implementation
 
-2. **PRD-QUICK-REFERENCE.md** (327 lines, 12KB)
+2. **PRD-QUICK-REFERENCE.md** (~400 lines, 15KB)
    - Navigation guide for the main PRD
    - Role-specific reading guides
    - Quick access to key sections
    - Pre-development checklist
+   - **UPDATED:** Reflects 8-week timeline
 
-3. **main.py** 
+3. **PHASE1-SPRINT-PLAN.md** (NEW! ~500 lines)
+   - **Detailed day-by-day plan for 2-week Phase 1**
+   - Hour-by-hour task breakdown
+   - Backend and frontend tasks separated
+   - Daily checkpoints and success criteria
+   - **START HERE for development**
+
+4. **TIMELINE-CHANGES-SUMMARY.md** (NEW! ~300 lines)
+   - Explains what changed from 36-week to 8-week timeline
+   - Phase-by-phase comparison
+   - Features deferred to post-launch
+   - Risk mitigation strategies
+   - Success requirements
+
+5. **main.py** 
    - Placeholder for main application code
 
 ---
@@ -36,11 +58,28 @@ This PRD serves as the **single source of truth** to:
 
 ## 🚀 Quick Start
 
+### ⚡ NEW: 8-Week Aggressive Timeline
+
+**This PRD has been updated for a 2-month delivery schedule:**
+- **Phase 1 (Weeks 1-2):** Core MVP - MUST complete in 2 weeks
+- **Phase 2 (Weeks 3-4):** Email Integration
+- **Phase 3 (Weeks 5-6):** Complaints & Automation
+- **Phase 4 (Weeks 7-8):** Advanced Features & Launch
+
 ### First Time Here?
 
+**If you're starting development:**
+1. **Start with:** `PHASE1-SPRINT-PLAN.md` - Day-by-day tasks for first 2 weeks
+2. **Then read:** `TIMELINE-CHANGES-SUMMARY.md` - Understand what changed
+3. **Reference:** `PRD.md` Section 6 for detailed feature specs
+
+**If you're a stakeholder:**
 1. **Start with:** `PRD-QUICK-REFERENCE.md` (5-minute read)
-2. **Then read:** Section 1 (Executive Summary) of `PRD.md` (10 minutes)
-3. **Find your role** in the Quick Reference and read relevant sections
+2. **Then read:** `PRD.md` Section 1 (Executive Summary)
+3. **Review:** Section 11 (8-week roadmap) in `PRD.md`
+
+**If you're from a specific team:**
+4. **Find your role** in the Quick Reference and read relevant sections
 
 ### By Role
 
@@ -104,14 +143,19 @@ This PRD serves as the **single source of truth** to:
 
 ## 📅 Timeline
 
+**⚡ AGGRESSIVE TIMELINE: 8 WEEKS (2 MONTHS) TOTAL DELIVERY**
+
 | Phase | Duration | Key Deliverables |
 |-------|----------|-----------------|
-| **Phase 1: MVP** | Weeks 1-12 | Auth, Multi-tenancy, Customers, Logs, Email, Search |
-| **Phase 2: Automation** | Weeks 13-20 | Complaints, SLA, Email sorting, Taiga integration |
-| **Phase 3: Communication** | Weeks 21-28 | VoIP, Chatbot, Voice commands |
-| **Phase 4: Mobile** | Weeks 29-36 | Android app, Optimization, Launch |
+| **Phase 1: Core MVP** | Weeks 1-2 | Auth, Multi-tenancy, Customers, Logs, Basic Search |
+| **Phase 2: Communication** | Weeks 3-4 | Email sync, Send emails, Advanced search, Threads |
+| **Phase 3: Support & Automation** | Weeks 5-6 | Complaints, SLA, Taiga, Email automation, Telegram |
+| **Phase 4: Advanced & Launch** | Weeks 7-8 | VoIP, RBAC, Analytics, Testing, Production launch |
 
-**Total: 36 weeks (9 months)**
+**Total: 8 weeks (2 months)**
+
+**Team Required:** 2-3 experienced full-stack developers working full-time  
+**Critical:** Ruthless scope control, daily standups, pre-configured infrastructure
 
 ---
 
