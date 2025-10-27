@@ -1,0 +1,21 @@
+### 🧠 Root test
+GET http://127.0.0.1:8000/
+Accept: application/json
+
+###
+
+### 👤 Add a new customer
+POST http://127.0.0.1:8000/add_customer
+Content-Type: application/json
+
+{
+  "name": "Sayeed Tahmid",
+  "email": "sayeed@walton.com",
+  "phone": "+8801677455091"
+}
+
+###
+
+### 📋 Get all customers
+GET http://127.0.0.1:8000/customers
+Accept: application/json
