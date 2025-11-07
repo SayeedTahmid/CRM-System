@@ -16,7 +16,8 @@ __all__ = ["router"]
 async def list_tasks(user: UserContext = Depends(require_roles(Role.admin, Role.manager, Role.sales)), crm: CRMService = Depends(get_crm_service)):
     tasks = await crm.list_activities(user.company_id)
     filtered = [task for task in tasks if task.type == ActivityType.task]
-    filtered.sort(key=lambda task: task.due_date or datetime.utcnow())
+    now = datetime.utcnow()
+    filtered.sort(key=lambda task: task.due_date or now)
     return filtered
 
 
