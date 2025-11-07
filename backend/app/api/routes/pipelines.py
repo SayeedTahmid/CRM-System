@@ -1,5 +1,4 @@
-from fastapi import APIRouter
-from fastapi import Depends
+from fastapi import APIRouter, Depends
 
 from ...core.security import require_roles
 from ...dependencies import get_crm_service
