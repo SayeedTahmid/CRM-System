@@ -1,6 +1,7 @@
 from datetime import datetime
 
-from fastapi import APIRouter, Depends
+from fastapi import APIRouter
+from fastapi import Depends
 
 from ...core.security import require_roles
 from ...dependencies import get_crm_service
@@ -8,6 +9,7 @@ from ...models.schemas import Activity, ActivityCreate, ActivityType, Role, User
 from ...services.crm_service import CRMService
 
 router = APIRouter(prefix="/tasks", tags=["tasks"])
+__all__ = ["router"]
 
 
 @router.get("", response_model=list[Activity])

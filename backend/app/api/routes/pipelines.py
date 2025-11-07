@@ -1,4 +1,5 @@
-from fastapi import APIRouter, Depends
+from fastapi import APIRouter
+from fastapi import Depends
 
 from ...core.security import require_roles
 from ...dependencies import get_crm_service
@@ -6,6 +7,7 @@ from ...models.schemas import Pipeline, PipelineCreate, PipelineStage, PipelineS
 from ...services.crm_service import CRMService
 
 router = APIRouter(prefix="/pipelines", tags=["pipelines"])
+__all__ = ["router"]
 
 
 @router.get("", response_model=list[Pipeline])

@@ -1,4 +1,5 @@
-from fastapi import APIRouter, Depends
+from fastapi import APIRouter
+from fastapi import Depends
 
 from ...core.security import require_roles
 from ...dependencies import get_crm_service
@@ -6,6 +7,7 @@ from ...models.schemas import CRMFile, CRMFileCreate, Role, UserContext
 from ...services.crm_service import CRMService
 
 router = APIRouter(prefix="/files", tags=["files"])
+__all__ = ["router"]
 
 
 @router.get("", response_model=list[CRMFile])
